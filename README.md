@@ -11,16 +11,14 @@
 # Power/Voltage not enough issue
 
 **Disable that on-board power switch chip**
-Step1.
-Cut JP1 with knifce and then short JP2 with solder
+
+**Step1.** Cut JP1 with knifce and then short JP2 with solder
 ![Cut JP1 with knifce and then short JP2 with solder](pics/MiniSS_PWR_01_JMP.png)
 
-Step2.
-Locate two 5V points we need to connect
+**Step2.** Locate two 5V points we need to connect
 ![Locate two 5V points we need to connect](pics/MiniSS_PWR_02_soldering_point.png)
 
-Step3.
-Connect these two solder points with 22AWG/20AWG wire.
+**Step3.** Connect these two solder points with 22AWG/20AWG wire.
 ![Connect these two solder points with 22AWG/20AWG wire.](pics/MiniSS_PWR_03.png)
 
 
