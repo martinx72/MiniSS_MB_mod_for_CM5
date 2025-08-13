@@ -31,7 +31,7 @@ This guide explains how to adapt earlier MiniSS Mainboard revisions (RevA/RevB) 
 ---
 ## Bypass on-board power switch
 
-Some units require a more direct 5V path. This mod disables the on-board power-switch IC by cutting JP1 and shorting JP2, then adding a direct 5V jumper wire.
+Some units require a more direct 5V path. This mod disables the on-board power-switch IC by cutting JP1 and shorting JP2, then adding a direct 5V jumper wire between the two pads shown in Step 2.
 
 **Tools:** precision knife, soldering iron, flux, 22–20 AWG wire, multimeter.
 
@@ -39,11 +39,11 @@ Some units require a more direct 5V path. This mod disables the on-board power-s
    _This effectively bypasses the power-switch IC path._
 ![Cut JP1 with knifce and then short JP2 with solder](pics/MiniSS_PWR_01_JMP.png)
 
-2. **Locate two 5V points** to be connected.  
+2. **Locate two 5V points** to be connected. (refer to image below for exact pads)
    Verify both points read ~5.0 V relative to GND with the multimeter.
 ![Locate two 5V points we need to connect](pics/MiniSS_PWR_02_soldering_point.png)
 
-3. **Add a 22–20 AWG wire** between the two 5V points.  
+3. **Add a 22 AWG or 20 AWG wire** between the two 5V points.  
    Keep the wire short, avoid sharp bends, and provide strain relief.
 ![Connect these two solder points with 22AWG/20AWG wire.](pics/MiniSS_PWR_03.png)
 
@@ -60,7 +60,7 @@ Some units require a more direct 5V path. This mod disables the on-board power-s
 
 This applies to the **very first batch of RevA** and primarily affects **CM4 Lite** (SD-boot). Some newer bootloaders changed SD power expectations. With older CM4 Lite bootloaders this wasn’t an issue, but newer bootloaders can expose SD power delivery quirks on the very first RevA batch. If your CM4 Lite still cannot detect the SD card, supply SD power via the following modification.
 
-If there is **no 3.3 V on Pin 2 of the SD power header**, you can **bridge Pin 1 (3.3 V source) to Pin 2 (SD power rail)** to supply SD power directly.
+If there is **no 3.3 V on Pin 2 of the SD power header**, you can **bridge Pin 1 (3.3 V source) to Pin 2 (SD power rail)** to supply SD power directly. This effectively bypasses the board’s SD power switch control
 
 ![SD Card Power Soruce](pics/MiniSS_SDCARD_PWR.png)
 
